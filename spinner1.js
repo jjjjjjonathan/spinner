@@ -1,13 +1,46 @@
-const arr = ["|", "/", "-", "\\", "|"];
+setTimeout(() => {
+  process.stdout.write('\r|   ');
+}, 100);
 
-const spin = (arr, delay) => {
-  arr.push("\n");
-  for (const index of arr) {
-    setTimeout(() => {
-      process.stdout.write(`\r${index}`);
-    }, delay);
-    delay += 200;
-  };
-};
+setTimeout(() => {
+  process.stdout.write('\r/   ');
+}, 300);
 
-spin(arr, 100);
+setTimeout(() => {
+  process.stdout.write('\r-   ');
+}, 500);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  process.stdout.write('\r\\   '); 
+}, 700);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  process.stdout.write('\r|   '); 
+}, 900);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  process.stdout.write('\r/   '); 
+}, 1100);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  process.stdout.write('\r-   '); 
+}, 1300);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  process.stdout.write('\r\\   '); 
+}, 1500);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  process.stdout.write('\r|   '); 
+}, 1700);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  process.stdout.write('\n'); 
+}, 1900);
